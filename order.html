@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizzeria il Pallazzo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <nav>
+            <a href="index.html" class="pnav">Home</a>
+            <a href="#pizza" class="pnav">Pizza</a>
+            <a href="#antipasti" class="pnav">Antipasti</a>
+            <a href="#pasta" class="pnav">Pasta</a>
+            <a href="#cart-container" class="pnav">Warenkorb</a>
+            <span id="cart-count" class="pnav">0</span>
+        </nav>
+        <header id="bestellen">
+            <h1>Bestellen Sie Ihre Lieblingsgerichte!</h1>
+        </header>
+        <div class="bestelltext">
+            <strong>
+                Willkommen im Online-Bestellsystem der Pizzeria il Pallazzo! Hier können Sie ganz einfach und 
+                bequem Ihre Lieblingsgerichte aus unserem vielfältigen Menü auswählen und bestellen. Egal ob 
+                knusprige Pizzen, leckere Pastagerichte oder herzhafte Antipasti - bei uns finden Sie alles, was das Herz begehrt. 
+                Wählen Sie Ihre Gerichte aus, fügen Sie sie Ihrem Warenkorb hinzu und schließen Sie die Bestellung mit nur 
+                wenigen Klicks ab. Wir freuen uns darauf, Ihnen köstliche italienische Spezialitäten direkt zu Ihnen nach Hause zu liefern!
+            </strong>
+            <br>
+            <br>
+            <strong>
+                Alle Pizzen haben bei uns eine Einheitsgröße von 30-32cm Durchmesser.
+                Die Bezahlung, wenn Sie online bestellen, erfolgt bei der Lieferung in bar oder mit Karte.
+            </strong>
+        </div>
+
+
+    <div id="pizza" class="bestellung">
+        <h1 class="centered">Unsere Pizza-Auswahl</h1>
+
+        <div class="bestell-item">
+            <h2>Margherita - 8.50 €</h2>
+        <div class="bestell-item-flex">
+            <div class="bestell-info">
+                <p>Tomatensauce, Mozzarella, frisches Basilikum</p>
+                <button onclick="addToCart('Margherita', 8.50)">In den Warenkorb</button>
+            </div>
+            <img src="graphic-components/pizza-margherita.jpg" alt="" class="img-bestellen">
+        </div>
+        </div>
+
+
+        <div class="bestell-item">
+        <h2>Salami - 9.50 €</h2>
+        <div class="bestell-item-flex">
+            <div class="bestell-info">
+            <p>Tomatensauce, Mozzarella, Salami</p>
+            <button onclick="addToCart('Salami', 9.50)">In den Warenkorb</button>
+            </div>
+            <img src="graphic-components/pizza-salami.jpg" alt="Pizza Salami" class="img-bestellen">
+        </div>
+        </div>
+
+        <div class="bestell-item">
+        <h2>Funghi - 9.00 €</h2>
+        <div class="bestell-item-flex">
+            <div class="bestell-info">
+            <p>Tomatensauce, Mozzarella, frische Champignons</p>
+            <button onclick="addToCart('Funghi', 9.00)">In den Warenkorb</button>
+            </div>
+            <img src="graphic-components/pizza-funghi.webp" alt="Pizza Funghi" class="img-bestellen">
+        </div>
+        </div>
+
+        <div class="bestell-item">
+        <h2>Marinara - 7.50 €</h2>
+        <div class="bestell-item-flex">
+            <div class="bestell-info">
+            <p>Tomatensauce, Knoblauch, Oregano, Olivenöl</p>
+            <button onclick="addToCart('Marinara', 7.50)">In den Warenkorb</button>
+            </div>
+            <img src="graphic-components/pizza-marinara.jpg" alt="Pizza Marinara" class="img-bestellen">
+        </div>
+        </div>
+
+        <div class="bestell-item">
+        <h2>Prosciutto - 10.00 €</h2>
+        <div class="bestell-item-flex">
+            <div class="bestell-info">
+            <p>Tomatensauce, Mozzarella, italienischer Schinken</p>
+            <button onclick="addToCart('Prosciutto', 10.00)">In den Warenkorb</button>
+            </div>
+            <img src="graphic-components/pizza-prosciutto.jpg" alt="Pizza Prosciutto" class="img-bestellen">
+        </div>
+        </div>
+
+        <div class="bestell-item">
+        <h2>Tuna - 10.50 €</h2>
+        <div class="bestell-item-flex">
+            <div class="bestell-info">
+            <p>Tomatensauce, Mozzarella, Thunfisch, Zwiebeln</p>
+            <button onclick="addToCart('Tuna', 10.50)">In den Warenkorb</button>
+            </div>
+            <img src="graphic-components/pizza-tuna.jpg" alt="Pizza Tuna" class="img-bestellen">
+        </div>
+        </div>
+
+    </div>
+
+    <div id="antipasti" class="bestellung">
+        <h1 class="centered">Unsere Antipasti-Auswahl</h1>
+
+        <div class="bestell-item">
+        <h2>Bruschetta al Pomodoro - 5.50 €</h2>
+        <div class="bestell-item-flex">
+            <div class="bestell-info">
+            <p>Geröstetes Brot mit frischen Tomaten, Knoblauch, Basilikum und Olivenöl</p>
+            <button onclick="addToCart('Bruschetta al Pomodoro', 5.50)">In den Warenkorb</button>
+            </div>
+            <img src="graphic-components/antipasti-bruschetta.webp" alt="Bruschetta al Pomodoro" class="img-bestellen">
+        </div>
+        </div>
+
+        <div class="bestell-item">
+        <h2>Caprese - 7.00 €</h2>
+        <div class="bestell-item-flex">
+            <div class="bestell-info">
+            <p>Tomaten, Büffelmozzarella, frisches Basilikum, Olivenöl und Balsamico</p>
+            <button onclick="addToCart('Caprese', 7.00)">In den Warenkorb</button>
+            </div>
+            <img src="graphic-components/antipasti-caprese.jpg" alt="Caprese" class="img-bestellen">
+        </div>
+        </div>
+
+        <div class="bestell-item">
+        <h2>Antipasto Misto - 10.50 €</h2>
+        <div class="bestell-item-flex">
+            <div class="bestell-info">
+            <p>Gemischte Platte mit italienischen Wurst- und Käsespezialitäten, Oliven und Gemüse</p>
+            <button onclick="addToCart('Antipasto Misto', 10.50)">In den Warenkorb</button>
+            </div>
+            <img src="graphic-components/antipasti-misto.jpg" alt="Antipasto Misto" class="img-bestellen">
+        </div>
+        </div>
+
+        <div class="bestell-item">
+        <h2>Carpaccio di Manzo - 11.00 €</h2>
+        <div class="bestell-item-flex">
+            <div class="bestell-info">
+            <p>Dünne Rindfleischscheiben mit Rucola, Parmesan und Zitrone</p>
+            <button onclick="addToCart('Carpaccio di Manzo', 11.00)">In den Warenkorb</button>
+            </div>
+            <img src="graphic-components/antipasti-carpaccio.webp" alt="Carpaccio di Manzo" class="img-bestellen">
+        </div>
+        </div>
+
+        <div class="bestell-item">
+        <h2>Verdure Grigliate - 8.00 €</h2>
+        <div class="bestell-item-flex">
+            <div class="bestell-info">
+            <p>Gegrilltes Gemüse mit Olivenöl, Knoblauch und Kräutern</p>
+            <button onclick="addToCart('Verdure Grigliate', 8.00)">In den Warenkorb</button>
+            </div>
+            <img src="graphic-components/antipasti-verdure-grigliate.jpg" alt="Verdure Grigliate" class="img-bestellen">
+        </div>
+        </div>
+    </div>
+
+    <div id="pasta" class="bestellung">
+        <h1 class="centered">Unsere Pasta-Auswahl</h1>
+
+        <div class="bestell-item">
+        <h2>Spaghetti Carbonara - 10.00 €</h2>
+        <div class="bestell-item-flex">
+            <div class="bestell-info">
+            <p>Spaghetti mit Speck, Ei, Pecorino und Pfeffer – klassisch römisch</p>
+            <button onclick="addToCart('Spaghetti Carbonara', 10.00)">In den Warenkorb</button>
+            </div>
+            <img src="graphic-components/pasta-carbonara.jpg" alt="Spaghetti Carbonara" class="img-bestellen">
+        </div>
+        </div>
+
+        <div class="bestell-item">
+        <h2>Spaghetti Bolognese - 9.50 €</h2>
+        <div class="bestell-item-flex">
+            <div class="bestell-info">
+            <p>Hausgemachte Tomaten-Hackfleischsauce nach traditionellem Rezept</p>
+            <button onclick="addToCart('Spaghetti Bolognese', 9.50)">In den Warenkorb</button>
+            </div>
+            <img src="graphic-components/pasta-bolognese.jpg" alt="Spaghetti Bolognese" class="img-bestellen">
+        </div>
+        </div>
+
+        <div class="bestell-item">
+        <h2>Penne all’Arrabbiata - 8.50 €</h2>
+        <div class="bestell-item-flex">
+            <div class="bestell-info">
+            <p>Pikante Tomatensauce mit Knoblauch, Chili und Petersilie</p>
+            <button onclick="addToCart('Penne all’Arrabbiata', 8.50)">In den Warenkorb</button>
+            </div>
+            <img src="graphic-components/pasta-arrabbiata.jpg" alt="Penne all’Arrabbiata" class="img-bestellen">
+        </div>
+        </div>
+
+        <div class="bestell-item">
+        <h2>Tagliatelle al Pesto - 9.00 €</h2>
+        <div class="bestell-item-flex">
+            <div class="bestell-info">
+            <p>Frisches Basilikumpesto mit Pinienkernen und Parmesan</p>
+            <button onclick="addToCart('Tagliatelle al Pesto', 9.00)">In den Warenkorb</button>
+            </div>
+            <img src="graphic-components/pasta-pesto.webp" alt="Tagliatelle al Pesto" class="img-bestellen">
+        </div>
+        </div>
+
+        <div class="bestell-item">
+        <h2>Lasagna al Forno - 11.00 €</h2>
+        <div class="bestell-item-flex">
+            <div class="bestell-info">
+            <p>Hausgemachte Lasagne mit Ragù, Béchamel und Käse - im Ofen überbacken</p>
+            <button onclick="addToCart('Lasagna al Forno', 11.00)">In den Warenkorb</button>
+            </div>
+            <img src="graphic-components/pasta-lasagne.jpg" alt="Lasagna al Forno" class="img-bestellen">
+        </div>
+        </div>
+    </div>
+    <p class="invis">Platzhalter</p>               
+
+    <div class="cart-display">
+    <div id="cart-container">
+        <h2>Ihr Warenkorb:</h2>
+        <ul id="cart"></ul>
+        <p id="total">Gesamt: 0.00 €</p>
+    </div>
+    <br>
+    <a href="#pizza" class="bestellbutton2">Weitere Bestellungen hinzufügen</a>
+    <br>
+    <button class="bestellbutton2" onclick="clearCart()">Warenkorb leeren</button>
+    <br>
+    <br>
+    <h3>Ihre Lieferdaten:</h3>
+    <input type="text" placeholder="Name" class="adresse-input">
+    <input type="text" placeholder="Straße & Hausnummer" class="adresse-input">
+    <input type="text" placeholder="PLZ & Ort" class="adresse-input">
+    <br>
+    <button class="bestellbutton2" onclick="clearCart(); window.location.href = 'Zbestell-bestätigung.html'">Bestellung absenden</button>
+    </div>
+
+
+
+    <p class="invis">Platzhalter</p>
+    <div class="impressumdiv">
+    <footer class="impressum">
+        <p>
+            <strong>Impressum</strong>
+            <span class="subtle">Umsatzsteuer-Ident-Nr.: DE815775554</span>
+            <span class="subtle">E-Mail:</span> info@pizzeria-il-pallazzo.de
+            <span class="subtle">Telefon:</span> +49 123 3412871
+            <span class="subtle">Inhaber:</span> Luigi Rossi
+            <span class="subtle">Adresse:</span> Sassenfeld 54, 41334 Nettetal
+            <br>
+            <a href="https://www.google.com/maps/place/La+Caverna/@51.313165,6.2531351,17z/data=!3m1!4b1!4m6!3m5!1s0x47c7571dcbff5a8b:0xc7b468d6b4d9885f!8m2!3d51.313165!4d6.2557154!16s%2Fg%2F11c549rr2t?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D" class="mapbutton" target="_blank">Karte</a>
+        </p>
+        
+    </footer>
+    </div>
+
+    <script>
+        // Warenkorb aus localStorage laden, falls vorhanden
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Artikel zum Warenkorb hinzufügen
+        function addToCart(name, price) {
+        cart.push({ name, price });
+        updateCart();
+        saveCart(); // nach jeder Änderung speichern
+        }
+
+        // Artikel aus dem Warenkorb entfernen
+        function removeFromCart(index) {
+        cart.splice(index, 1);
+        updateCart();
+        saveCart(); // nach änderung speichern
+        }
+
+        // Warenkorb aktualisieren (Anzeige)
+        function updateCart() {
+        const cartList = document.getElementById('cart');
+        const totalElement = document.getElementById('total');
+        const cartCountElement = document.getElementById('cart-count');
+
+        cartList.innerHTML = '';
+
+        let total = 0;
+
+        cart.forEach((item, index) => {
+            const li = document.createElement('li');
+            li.classList.add('cart-item');
+            li.textContent = `${item.name} - ${item.price.toFixed(2)} €`;
+
+            const removeBtn = document.createElement('button');
+            removeBtn.textContent = 'Entfernen';
+            removeBtn.classList.add('remove-btn');
+            removeBtn.onclick = () => removeFromCart(index);
+
+            li.appendChild(removeBtn);
+            cartList.appendChild(li);
+
+            total += item.price;
+        });
+
+        // Anzahl der Artikel anzeigen (z. B. im Header)
+        cartCountElement.textContent = cart.length;
+
+        // Gesamtpreis anzeigen
+        totalElement.textContent = `Gesamt: ${total.toFixed(2)} €`;
+        }
+
+        // Warenkorb im localStorage speichern
+        function saveCart() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        // Warenkorb aus localStorage löschen (z. B. nach Absenden der Bestellung)
+        function clearCart() {
+        cart = [];
+        localStorage.removeItem('cart');
+        updateCart();
+        }
+
+        // Beim Laden der Seite Warenkorb wiederherstellen
+        updateCart();
+    </script>
+</body>
+</html>
