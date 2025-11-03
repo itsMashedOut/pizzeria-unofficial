@@ -1,0 +1,419 @@
+/* Animations */
+@keyframes fadeinup {
+    0% {
+        opacity: 0; 
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Standard styles */
+a {
+    text-decoration: none;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    background-color: #e6e5e5;
+    color: #333;
+}
+html {
+    scroll-behavior: smooth;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: left;
+}
+div {
+    box-sizing: border-box;
+    padding: 0 16px;
+    scroll-margin-top: 100px;
+}
+strong {
+    font-weight: bold;
+    font-size: larger;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #000000;
+    margin-bottom: 16px;
+}
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+}
+button {
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 4px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    transition: transform 0.1s ease, background-color 0.2s ease;
+}
+button:active {
+    background-color: #dbdbdb;
+    transform: scale(0.99);
+}
+
+
+/* Header Styles */
+header {
+    left: 0;
+    margin-top: 140px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.anim1 {
+    animation: fadeinup 1s ease-out;
+}
+.anim2 {
+    animation: fadeinup 1s ease-out .3s both;
+}
+.anim3 {
+    animation: fadeinup 1s ease-out .6s both;
+}
+
+
+/* Main Content Styles */
+.tableoeffnungszeiten {
+    border-spacing: 20px;
+}
+.tradition-text {
+    max-width: 55%;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 12px;
+    animation: fadeinup 1s ease-out 1.2s both;
+    font-size: large;
+    text-align: justify;
+}
+.making-text {
+    max-width: 600px;
+    margin: 40px auto;
+    margin-top: 20px !important;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: large;
+    text-align: justify;
+}
+.bestelltext {
+    max-width: 50%;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 12px;
+    animation: fadeinup 1s ease-out 0.5s both;
+    font-size: large;
+    text-align: justify;
+}
+.bestellbutton {
+    display: inline-block;
+    background-color: #7499b8;
+    color: rgb(0, 0, 0);
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: larger;
+    transition: background-color 0.3s ease;
+    animation: fadeinup 1s ease-out .8s both;
+}
+.bestellbutton:hover {
+    background-color: #03779b;
+}
+.background1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.3;
+}
+.img-bestellen {
+    width: 300px;
+    height: auto;
+    flex: 1;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px;
+    transition: transform 0.3s ease;
+}
+.img-bestellen:hover {
+    transform: scale(1.05);
+}
+.platzhalter { /* spezieller platzhalter, um das impressum (pos: absolute) nicht zu überlappen */
+    height: 350px;
+    opacity: 0;
+    pointer-events: none;
+    margin: 0;
+}
+.video {
+    width: 600px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px;
+    animation: fadeinup2 1s ease-out 1.3s both;
+}
+
+
+/* Navigation Styles */
+nav {
+    background-color: #7499b8;
+    padding: 24px 0 24px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 24px;
+}
+.pnav {
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size: 1.3em;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    transition: font-size 0.3s ease;
+}
+.pnav:hover {
+    font-size: 1.4em;
+}
+
+
+/* Impressum Styles */
+.impressum {
+    text-align: center;
+    font-size: 0.9em;
+    background-color: #333;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.impressumdiv {
+    position: relative;
+    width: 110%;
+    margin-top: 200px;
+    margin-left: -2%;
+}
+.impressum p {
+    color: #ffffff;
+    padding: 15px;
+    white-space: pre-line;
+}
+p .subtle {
+    color: #bbbbbb;
+}
+
+
+
+/* Map Button in Impressum */
+.mapbutton {
+    color: black;
+    background-color: orange;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+.mapbutton:hover {
+    background-color: #b88360;
+    color: black;
+}
+.ptable {
+    font-weight: bold;
+    font-size: large;
+}
+
+
+/* div standartisierte klassen */
+.div {
+    margin: 100px auto;
+    padding: 50px;
+    background-color: #d6d6d6;
+    width: 60%;
+    height: fit-content;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px;
+}
+.div2 {
+    padding: 50px;
+    text-align: center;
+    margin: 100px auto;
+    margin-bottom: 350px;
+    margin-top: 250px;
+    background-color: #d6d6d6; 
+    width: 50%;
+    height: fit-content;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px;
+}
+
+
+/* Bestell Komponente */
+.bestellung {
+    margin-top: 40px;
+    width: 80%;
+    gap: 40px;
+    margin: 20px auto;
+    animation: fadeinup 1s ease-out 1s both;
+}
+.bestell-item {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px;
+    text-align: center;
+    width: 50%;
+}
+.bestell-item-flex {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.bestell-info {
+    top: 0;
+    margin-top: 10px;
+    font-size: medium;
+    flex: 1;
+}
+
+
+
+/* js Komponente o.ä.*/
+.cart-item {
+    display: flex;            
+    justify-content: space-between; 
+    align-items: center;     
+    gap: 10px;                
+    padding: 6px 10px;
+    background: #f4f4f4;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    width: 22%;
+    margin: auto;
+    margin-top: 10px;
+}
+.cart-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #dcdcdc;
+    border-radius: 12px;
+    width: fit-content;
+}
+button {
+    cursor: pointer;
+}
+.remove-btn {
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    transition: background-color 0.1s ease;
+}
+.remove-btn:hover {
+    background-color: darkred;
+}
+.cart-container-inner {
+    margin-top: 20px;
+    width: 200px;
+}
+.cart-display {
+    text-align: center;
+    margin: auto;
+    width: 100%;
+}
+
+
+/* bestellbutton für die bestellseite */
+.bestellbutton2 {
+    background-color: #000000;
+    padding: 8px;
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    margin: 50px;
+    transition: background-color 0.3s ease;
+    font-size: large;
+}
+.bestellbutton2:hover {
+    background-color: #333333;
+}
+
+
+
+/* Zusätzliche Klassen (u.a. für die Bestellbestätigung)*/
+.adresse-input {
+    display: block;
+    width: 300px;
+    margin: 10px auto;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+.centered {
+    text-align: center;
+}
+.invis {
+    margin-bottom: 200px;
+    opacity: 0;
+}
+.divbestätigung {
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px;
+    border-radius: 20px;
+    width: 35%;
+    margin: 100px auto;
+    padding: 40px;
+    background-color: #ffffff;
+}
+.strongbestaetigung {
+    text-align: justify;
+}
+.bestellbutton3 {
+    display: inline-block;
+    background-color: #7499b8;
+    color: rgb(0, 0, 0);
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+.bestellbutton3:hover {
+    background-color: #03779b;
+}
+.high-top-margin {
+    margin-top: 400px !important;
+}
+.form {
+    border-radius: 20px;
+    width: 40%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: auto;
+}
